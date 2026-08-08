@@ -440,9 +440,3 @@ This repository will continuously evolve as new SOC capabilities, detection tech
 ---
 
 ⭐ This project is built for continuous hands-on learning and professional SOC skill development.
-
-Then run:
-
-```bash
-git status
-````
