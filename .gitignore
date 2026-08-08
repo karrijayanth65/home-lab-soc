@@ -1,0 +1,44 @@
+# Secrets and credentials
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# Wazuh / SIEM data
+*.log
+*.json
+*.pcap
+*.pcapng
+alerts/
+archives/
+
+# Virtual machines
+*.vdi
+*.vmdk
+*.vbox-prev
+*.ova
+*.ovf
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/*
+!.vscode/extensions.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
