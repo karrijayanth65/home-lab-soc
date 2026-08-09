@@ -774,33 +774,36 @@ This is a useful methodology when validating security monitoring.
 ---
 
 # 21. Evidence to Preserve
-
-The following evidence should be retained with this investigation:
-
 * Wazuh FIM dashboard screenshot
+
+<img width="1293" height="527" alt="Fim dash board" src="https://github.com/user-attachments/assets/7c72f009-2744-4c28-a5ef-6b378f6ca39d" />
+
+
 * Wazuh event table screenshot
+
+<img width="1351" height="417" alt="Wazuh FIM dashboard screenshot" src="https://github.com/user-attachments/assets/f281a448-a084-45a2-8304-d3b41d16c574" />
+
+<img width="1357" height="191" alt="Wazuh event table screenshot" src="https://github.com/user-attachments/assets/b63cdf4c-7ed3-442a-b414-e1435713fe26" />
+  
 * JSON event data
+
+<img width="1536" height="1024" alt="Json _1" src="https://github.com/user-attachments/assets/c9cec19c-9317-44aa-ae8c-7aae47d99070" />
+  
 * Windows FIM configuration
+
+<img width="1242" height="318" alt="FIM adding" src="https://github.com/user-attachments/assets/b572258e-d6ac-41e9-b178-c94f4bbb0e84" />
+  
 * PowerShell test commands
+
+<img width="719" height="380" alt="PowerShell test commands" src="https://github.com/user-attachments/assets/bf8c935d-ead5-4db5-8299-6dcb7d0a5a52" />
+
 * Agent status
+
+<img width="335" height="81" alt="Agent statsu" src="https://github.com/user-attachments/assets/eed5ff95-8719-45b9-99e4-3e6e220c3816" />
+  
 * Detection timestamps
 
 Recommended screenshot location:
-
-```text
-screenshots/
-└── case-001-windows-fim/
-```
-
-Suggested filenames:
-
-```text
-01-wazuh-agent-active.png
-02-fim-configuration.png
-03-fim-dashboard.png
-04-fim-events.png
-05-fim-event-details.png
-```
 
 ---
 
