@@ -1,12 +1,6 @@
-Absolutely. Since this is going into your **GitHub portfolio**, let's make it look like a real SOC investigation report rather than just a lab note.
 
-Copy-paste the entire content below into:
+# Investigations/001-windows-fim.md
 
-```text
-investigations/001-windows-fim.md
-```
-
-````markdown
 # Case 001 — Windows File Integrity Monitoring (FIM)
 
 > **Lab Type:** Defensive Security / SIEM Detection  
@@ -800,10 +794,6 @@ This is a useful methodology when validating security monitoring.
 * Agent status
 
 <img width="335" height="81" alt="Agent statsu" src="https://github.com/user-attachments/assets/eed5ff95-8719-45b9-99e4-3e6e220c3816" />
-  
-* Detection timestamps
-
-Recommended screenshot location:
 
 ---
 
@@ -976,29 +966,3 @@ Impact:          None
 Response:        Not required
 Lessons Learned: Documented
 ```
-
-````
-
-### One small GitHub tip
-
-For this case, keep your **actual JSON event export** separate from this Markdown report. Don't dump the entire JSON into the report; it makes the case difficult to read.
-
-A professional structure would eventually be:
-
-```text
-home-lab-soc-1/
-├── investigations/
-│   └── 001-windows-fim.md
-│
-├── screenshots/
-│   └── case-001-windows-fim/
-│       ├── 01-agent-active.png
-│       ├── 02-fim-config.png
-│       ├── 03-fim-dashboard.png
-│       ├── 04-fim-events.png
-│       └── 05-fim-event-details.png
-│
-└── ...
-````
-
-**Also:** don't commit raw logs containing passwords, API tokens, private keys, or other secrets. Your `.gitignore` foundation we created earlier should help protect those.
