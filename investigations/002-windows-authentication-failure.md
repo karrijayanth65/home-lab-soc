@@ -581,18 +581,39 @@ This investigation demonstrated several important SOC concepts:
 
 The following screenshots were captured during the investigation:
 
-```text
 screenshots/
-└── Case 2/
-    ├── Test user created.png
+
+ Test user created.png
+ 
+<img width="531" height="110" alt="Test user created" src="https://github.com/user-attachments/assets/336fd265-7c66-4d34-8352-d608f0852090" />
+
     ├── Test user created_1.png
+    
+<img width="1012" height="169" alt="Test user created_1" src="https://github.com/user-attachments/assets/577fd181-f8ce-4abe-a7c6-2bb259d19472" />
+
     ├── Win_event_1.png
+    
+<img width="770" height="628" alt="Win_event_1" src="https://github.com/user-attachments/assets/a052d2ae-78cc-49a3-bb05-35f82e73620b" />
+
     ├── Win_event_2.png
+    
+<img width="1178" height="646" alt="Win_event_2" src="https://github.com/user-attachments/assets/fda8961a-0e88-4213-b751-adf11e50d508" />
+
     ├── Win_event_3.png
+    
+<img width="978" height="643" alt="Win_event_3" src="https://github.com/user-attachments/assets/f747489e-0088-47b6-a70d-a317a8cdd0da" />
+
     ├── Wazuh_TH_Query.png
+    
+<img width="1289" height="431" alt="Wazuh_TH_Querry" src="https://github.com/user-attachments/assets/df5e67dc-afba-4418-a1bd-f5013114ccdd" />
+
     ├── Fresh_wrong_hits.png
+    
+<img width="1293" height="517" alt="Fresh_worong hits" src="https://github.com/user-attachments/assets/3cc79808-e08a-4b25-aee6-2fb95471cdef" />
+
     └── Results_TH.png
-```
+    
+<img width="1365" height="697" alt="Results_TH" src="https://github.com/user-attachments/assets/b8132255-642f-473f-b936-4877145b54fa" />
 
 ### Evidence purpose
 
