@@ -1,6 +1,3 @@
-
-# Investigations/001-windows-fim.md
-
 # Case 001 — Windows File Integrity Monitoring (FIM)
 
 > **Lab Type:** Defensive Security / SIEM Detection  
