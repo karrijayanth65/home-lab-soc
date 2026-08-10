@@ -119,8 +119,6 @@ This established the baseline before making any configuration change.
 
 ### Evidence — Initial Configuration
 
-**SCREENSHOT — INSERT HERE**
-
 ![Initial Process Creation audit configuration](../screenshots/Case%204/PS_01_process_creation_audit_before.png)
 
 **Evidence file:** `PS_01_process_creation_audit_before.png`
@@ -156,8 +154,6 @@ Process Creation    Success
 This confirmed that successful process-creation auditing was enabled.
 
 ### Evidence — Auditing Enabled
-
-**SCREENSHOT — INSERT HERE**
 
 ![Process Creation auditing enabled](../screenshots/Case%204/PS_02_process_creation_audit_enabled.png)
 
@@ -243,8 +239,6 @@ powershell.exe
 
 ### Evidence — Windows Event 4688
 
-**SCREENSHOT — INSERT HERE**
-
 ![Windows Security Event 4688](../screenshots/Case%204/Win_01_event_4688.png)
 
 **Evidence file:** `Win_01_event_4688.png`
@@ -291,8 +285,6 @@ This confirmed that Windows process-creation telemetry was being received and pr
 
 ### Evidence — Wazuh Event Ingestion
 
-**SCREENSHOT — INSERT HERE**
-
 ![Wazuh Event 4688 ingestion](../screenshots/Case%204/Wazuh_01_event_4688_ingested.png)
 
 **Evidence file:** `Wazuh_01_event_4688_ingested.png`
@@ -333,8 +325,6 @@ Event ID: 4688
 ```
 
 ### Evidence — Wazuh Event Details
-
-**SCREENSHOT — INSERT HERE**
 
 ![Wazuh Event 4688 details](../screenshots/Case%204/Wazuh_02_event_4688_details.png)
 
@@ -377,8 +367,6 @@ Isolate the Controlled Activity
 ```
 
 ### Evidence — Filtered Notepad Event
-
-**SCREENSHOT — INSERT HERE**
 
 ![Filtered notepad Event 4688](../screenshots/Case%204/Wazuh_03_filtered_notepad_4688.png)
 
@@ -424,8 +412,6 @@ windows_eventchannel
 and the event originated from the Windows Security channel.
 
 ### Evidence — Final Wazuh Event Details
-
-**SCREENSHOT — INSERT HERE**
 
 ![Final Wazuh Event 4688 details](../screenshots/Case%204/Wazuh_04_filtered_event_details.png)
 
