@@ -286,7 +286,7 @@ corroborating evidence for reconnaissance activity.
 ### Baseline
 
 ![Wireshark ARP
-learning](../screenshots/Case 7/PS_05_Case7_Wireshark_HostOnly_Baseline.png)
+learning](../screenshots/Case%207/PS_05_Case7_Wireshark_HostOnly_Baseline.png)
 
 ### ARP learning
 
