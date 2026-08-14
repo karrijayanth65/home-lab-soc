@@ -519,7 +519,7 @@ The purpose is to understand attacker behavior from a defender's perspective.
 * Windows telemetry
 * Wazuh
 
-**Status:** 🔜 Next
+**Status:** ✅ Completed
 
 ---
 
