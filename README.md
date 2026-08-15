@@ -523,7 +523,7 @@ The purpose is to understand attacker behavior from a defender's perspective.
 
 ---
 
-## Case 08 — Authentication Attack Simulation
+## Case 08 — [Authentication Attack Simulation](investigations/008-authentication_attack_simulation-60204.md)
 
 **Concepts**
 
