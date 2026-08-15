@@ -541,7 +541,7 @@ The purpose is to understand attacker behavior from a defender's perspective.
 * Wazuh
 * Network telemetry
 
-**Status:** 🔜 Planned
+**Status:** ✅ Completed
 
 ---
 
