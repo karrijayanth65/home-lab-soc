@@ -379,7 +379,7 @@ If a case reveals an important missing concept, the course may add a supporting 
 
 # 🟢 PHASE 1 — Security Foundations
 
-## Case 01 — Windows File Integrity Monitoring
+## Case 01 — [Windows File Integrity Monitoring](investigations/001-windows-fim.md)
 
 **Concepts**
 
@@ -393,7 +393,7 @@ If a case reveals an important missing concept, the course may add a supporting 
 
 ---
 
-## Case 02 — Windows Authentication Failures
+## Case 02 — [Windows Authentication Failures](investigations/002-windows-authentication-failure.md)
 
 **Concepts**
 
@@ -407,7 +407,7 @@ If a case reveals an important missing concept, the course may add a supporting 
 
 ---
 
-## Case 03 — PowerShell Telemetry
+## Case 03 — [PowerShell Telemetry](investigations/003-windows-powershell-4104.md)
 
 **Primary telemetry**
 
@@ -425,7 +425,7 @@ If a case reveals an important missing concept, the course may add a supporting 
 
 ---
 
-## Case 04 — Process Creation
+## Case 04 — [Process Creation](investigations/004-windows-process-creation-4688.md)
 
 **Primary telemetry**
 
@@ -444,7 +444,7 @@ If a case reveals an important missing concept, the course may add a supporting 
 
 ---
 
-## Case 05 — Windows Service Creation
+## Case 05 — [Windows Service Creation](investigations/005-windows-service-creation-7045.md)
 
 **Primary telemetry**
 
@@ -462,7 +462,7 @@ If a case reveals an important missing concept, the course may add a supporting 
 
 ---
 
-## Case 06 — Scheduled Task Creation
+## Case 06 — [Scheduled Task Creation](investigations/006-windows-scheduled-task-4698.md)
 
 **Primary telemetry**
 
@@ -491,7 +491,7 @@ The purpose is to understand attacker behavior from a defender's perspective.
 
 ---
 
-## Case 07 — Network Reconnaissance
+## Case 07 — [Network Reconnaissance](investigations/007-network-reconnaissance-100100.md)
 
 **Concepts**
 
