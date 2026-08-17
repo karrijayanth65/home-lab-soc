@@ -1,6 +1,6 @@
 # 🛡️ Home Lab SOC
 
-A hands-on cybersecurity laboratory built to develop practical **SOC, Blue Team, threat detection, investigation, threat hunting, incident response, detection engineering, and security automation skills**.
+Hi all, I'm Jayanth K.Welcome to my hands-on cybersecurity laboratory. I built this environment to master practical skills in **SOC operations, Blue Teaming, threat detection, investigation, and threat hunting**. It also serves as my testing ground for **incident response, detection engineering, and security automation**.
 
 This project is intentionally designed as a **learning laboratory rather than a tool-specific laboratory**.
 
