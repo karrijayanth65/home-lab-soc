@@ -545,7 +545,7 @@ The purpose is to understand attacker behavior from a defender's perspective.
 
 ---
 
-## Case 09 — SMB / Network Resource Access
+## Case 09 — [SMB / Network Resource Access](investigations/009-windows-smb-detailed-file-share-access-5145.md)
 
 **Concepts**
 
@@ -563,7 +563,7 @@ The purpose is to understand attacker behavior from a defender's perspective.
 * Network monitoring
 * Wazuh
 
-**Status:** 🔜 Planned
+**Status:** ✅ Completed
 
 ---
 
