@@ -703,7 +703,7 @@ Document
 
 ---
 
-## Case 14 — Multi-Stage Attack Chain
+## Case 14 — [Multi-Stage Attack Chain](investigations/Case%2014%20-%20Multi-Stage%20Attack%20Chain/README.md)
 
 **Objective**
 
@@ -735,7 +735,7 @@ Detection
 * MITRE ATT&CK
 * Detection coverage
 
-**Status:** 🔜 Planned
+**Status:** ✅ Closed — ordered correlation logic validated against six controlled timelines
 
 ---
 
@@ -1326,7 +1326,7 @@ Directories may be introduced gradually as the corresponding learning area becom
 * [x] Case 11 — Defense Evasion *(documentation PoC; live validation pending)*
 * [x] Case 12 — Detection Gap *(coverage analysis complete; live validation pending)*
 * [x] Case 13 — Custom Detection *(offline rule validation passed: 6/6)*
-* [ ] Case 14 — Attack Chain
+* [x] Case 14 — Attack Chain *(offline correlation validation passed: 6/6)*
 * [ ] Case 15 — SOC Capstone
 
 ## Detection Engineering
@@ -1336,7 +1336,7 @@ Directories may be introduced gradually as the corresponding learning area becom
 * [x] Sigma fundamentals
 * [x] Detection testing
 * [x] Detection tuning
-* [ ] Correlation
+* [x] Correlation
 * [x] MITRE ATT&CK Detection Strategies
 * [x] Detection coverage analysis
 
@@ -1346,8 +1346,8 @@ Directories may be introduced gradually as the corresponding learning area becom
 * [ ] Hypothesis-driven hunting
 * [ ] Endpoint hunting
 * [ ] Network hunting
-* [ ] Cross-source correlation
-* [ ] Attack-chain hunting
+* [x] Cross-source correlation *(controlled Windows Security and Sysmon timelines)*
+* [x] Attack-chain hunting *(offline correlation exercise)*
 
 ## Incident Response
 
@@ -1362,7 +1362,7 @@ Directories may be introduced gradually as the corresponding learning area becom
 ## Automation
 
 * [ ] Wazuh API
-* [ ] Python automation
+* [x] Python automation *(correlation validator)*
 * [ ] PowerShell automation
 * [ ] Telegram alerting
 * [ ] Automated evidence collection
@@ -1630,13 +1630,13 @@ The objective is to develop the ability to answer:
 
 **Status:** 🚧 Active Development
 
-**Current Phase:** Phase 3 core detection engineering completed → Phase 4 active
+**Current Phase:** Phase 4 advanced investigation completed → Phase 5 capstone active
 
-**Completed Investigations:** 9 lab-validated + 3 documented + 1 offline-validated / 15
+**Completed Investigations:** 9 lab-validated + 3 documented + 2 offline-validated / 15
 
-**Current Milestone:** Custom detection artifacts and repeatable tests completed; preparing multi-stage correlation.
+**Current Milestone:** Multi-stage correlation and attack-chain analysis completed; preparing the full SOC capstone.
 
-**Next Major Case:** Case 14 — Multi-Stage Attack Chain
+**Next Major Case:** Case 15 — Full SOC Incident Response Capstone
 
 ---
 

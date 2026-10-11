@@ -1,0 +1,45 @@
+title: Case 14 Multi-Stage Windows Attack Chain
+id: 73c36c1e-bbd6-4c94-ae64-a55eb23e5306
+status: test
+description: Correlates a network logon, WinRM session, PowerShell execution, certutil decoding, and scheduled-task creation on one Windows host and user within 30 minutes.
+author: Jayanth Karri
+date: 2026-10-12
+type: ordered_temporal_correlation
+group_by:
+  - host
+  - user
+timespan: 30m
+ordered_stages:
+  - name: network_logon
+    source: Windows Security
+    event_id: 4624
+    condition: LogonType equals 3
+  - name: winrm_session
+    source: Sysmon
+    event_id: 1
+    condition: Image ends with wsmprovhost.exe
+  - name: powershell_execution
+    source: Sysmon
+    event_id: 1
+    condition: Image ends with powershell.exe or pwsh.exe and ParentImage ends with wsmprovhost.exe
+  - name: file_decode
+    source: Sysmon
+    event_id: 1
+    condition: Image ends with certutil.exe and CommandLine contains -decode or -decodehex
+  - name: scheduled_task_creation
+    source: Sysmon
+    event_id: 1
+    condition: Image ends with schtasks.exe and CommandLine contains /create
+severity: high
+tags:
+  - attack.t1021.006
+  - attack.t1059.001
+  - attack.t1140
+  - attack.t1053.005
+falsepositives:
+  - Authorized remote administration followed by software deployment or maintenance
+  - Approved automation that decodes configuration data and creates a scheduled task
+response:
+  - Confirm the source address, account authorization, target role, and change window
+  - Review process ancestry, decoded-file provenance, task definition, and follow-on execution
+  - Escalate when the chain is unexpected or crosses administrative boundaries

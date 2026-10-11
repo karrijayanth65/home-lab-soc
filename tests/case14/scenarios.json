@@ -1,0 +1,67 @@
+[
+  {
+    "id": "complete_chain_same_host_user",
+    "expected": true,
+    "events": [
+      {"timestamp":"2026-10-12T10:00:00Z","host":"WIN11-LAB","user":"lab-admin","source_ip":"192.168.56.20","event_id":4624,"logon_type":3},
+      {"timestamp":"2026-10-12T10:01:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\wsmprovhost.exe","parent_image":"C:\\Windows\\System32\\svchost.exe","command_line":"wsmprovhost.exe -Embedding"},
+      {"timestamp":"2026-10-12T10:02:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","parent_image":"C:\\Windows\\System32\\wsmprovhost.exe","command_line":"powershell.exe -NoProfile -Command Get-ComputerInfo"},
+      {"timestamp":"2026-10-12T10:04:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\certutil.exe","parent_image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","command_line":"certutil.exe -decode C:\\Lab\\message.b64 C:\\Lab\\decoded.txt"},
+      {"timestamp":"2026-10-12T10:07:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\schtasks.exe","parent_image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","command_line":"schtasks.exe /Create /SC ONLOGON /TN SOC-Lab-HealthCheck /TR C:\\Lab\\healthcheck.cmd"}
+    ]
+  },
+  {
+    "id": "missing_decode_stage",
+    "expected": false,
+    "events": [
+      {"timestamp":"2026-10-12T11:00:00Z","host":"WIN11-LAB","user":"lab-admin","source_ip":"192.168.56.20","event_id":4624,"logon_type":3},
+      {"timestamp":"2026-10-12T11:01:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\wsmprovhost.exe","parent_image":"C:\\Windows\\System32\\svchost.exe","command_line":"wsmprovhost.exe -Embedding"},
+      {"timestamp":"2026-10-12T11:02:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","parent_image":"C:\\Windows\\System32\\wsmprovhost.exe","command_line":"powershell.exe -NoProfile -Command Get-ComputerInfo"},
+      {"timestamp":"2026-10-12T11:05:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\schtasks.exe","parent_image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","command_line":"schtasks.exe /Create /SC ONLOGON /TN SOC-Lab-HealthCheck /TR C:\\Lab\\healthcheck.cmd"}
+    ]
+  },
+  {
+    "id": "different_host_breaks_chain",
+    "expected": false,
+    "events": [
+      {"timestamp":"2026-10-12T12:00:00Z","host":"WIN11-LAB","user":"lab-admin","source_ip":"192.168.56.20","event_id":4624,"logon_type":3},
+      {"timestamp":"2026-10-12T12:01:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\wsmprovhost.exe","parent_image":"C:\\Windows\\System32\\svchost.exe","command_line":"wsmprovhost.exe -Embedding"},
+      {"timestamp":"2026-10-12T12:02:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","parent_image":"C:\\Windows\\System32\\wsmprovhost.exe","command_line":"powershell.exe -NoProfile -Command Get-ComputerInfo"},
+      {"timestamp":"2026-10-12T12:04:00Z","host":"WIN11-LAB-02","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\certutil.exe","parent_image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","command_line":"certutil.exe -decode C:\\Lab\\message.b64 C:\\Lab\\decoded.txt"},
+      {"timestamp":"2026-10-12T12:07:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\schtasks.exe","parent_image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","command_line":"schtasks.exe /Create /SC ONLOGON /TN SOC-Lab-HealthCheck /TR C:\\Lab\\healthcheck.cmd"}
+    ]
+  },
+  {
+    "id": "different_user_breaks_chain",
+    "expected": false,
+    "events": [
+      {"timestamp":"2026-10-12T13:00:00Z","host":"WIN11-LAB","user":"lab-admin","source_ip":"192.168.56.20","event_id":4624,"logon_type":3},
+      {"timestamp":"2026-10-12T13:01:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\wsmprovhost.exe","parent_image":"C:\\Windows\\System32\\svchost.exe","command_line":"wsmprovhost.exe -Embedding"},
+      {"timestamp":"2026-10-12T13:02:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","parent_image":"C:\\Windows\\System32\\wsmprovhost.exe","command_line":"powershell.exe -NoProfile -Command Get-ComputerInfo"},
+      {"timestamp":"2026-10-12T13:04:00Z","host":"WIN11-LAB","user":"other-admin","event_id":1,"image":"C:\\Windows\\System32\\certutil.exe","parent_image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","command_line":"certutil.exe -decode C:\\Lab\\message.b64 C:\\Lab\\decoded.txt"},
+      {"timestamp":"2026-10-12T13:07:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\schtasks.exe","parent_image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","command_line":"schtasks.exe /Create /SC ONLOGON /TN SOC-Lab-HealthCheck /TR C:\\Lab\\healthcheck.cmd"}
+    ]
+  },
+  {
+    "id": "outside_thirty_minute_window",
+    "expected": false,
+    "events": [
+      {"timestamp":"2026-10-12T14:00:00Z","host":"WIN11-LAB","user":"lab-admin","source_ip":"192.168.56.20","event_id":4624,"logon_type":3},
+      {"timestamp":"2026-10-12T14:01:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\wsmprovhost.exe","parent_image":"C:\\Windows\\System32\\svchost.exe","command_line":"wsmprovhost.exe -Embedding"},
+      {"timestamp":"2026-10-12T14:02:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","parent_image":"C:\\Windows\\System32\\wsmprovhost.exe","command_line":"powershell.exe -NoProfile -Command Get-ComputerInfo"},
+      {"timestamp":"2026-10-12T14:04:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\certutil.exe","parent_image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","command_line":"certutil.exe -decode C:\\Lab\\message.b64 C:\\Lab\\decoded.txt"},
+      {"timestamp":"2026-10-12T14:45:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\schtasks.exe","parent_image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","command_line":"schtasks.exe /Create /SC ONLOGON /TN SOC-Lab-HealthCheck /TR C:\\Lab\\healthcheck.cmd"}
+    ]
+  },
+  {
+    "id": "out_of_order_activity",
+    "expected": false,
+    "events": [
+      {"timestamp":"2026-10-12T15:00:00Z","host":"WIN11-LAB","user":"lab-admin","source_ip":"192.168.56.20","event_id":4624,"logon_type":3},
+      {"timestamp":"2026-10-12T15:01:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\wsmprovhost.exe","parent_image":"C:\\Windows\\System32\\svchost.exe","command_line":"wsmprovhost.exe -Embedding"},
+      {"timestamp":"2026-10-12T15:02:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\certutil.exe","parent_image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","command_line":"certutil.exe -decode C:\\Lab\\message.b64 C:\\Lab\\decoded.txt"},
+      {"timestamp":"2026-10-12T15:03:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","parent_image":"C:\\Windows\\System32\\wsmprovhost.exe","command_line":"powershell.exe -NoProfile -Command Get-ComputerInfo"},
+      {"timestamp":"2026-10-12T15:07:00Z","host":"WIN11-LAB","user":"lab-admin","event_id":1,"image":"C:\\Windows\\System32\\schtasks.exe","parent_image":"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe","command_line":"schtasks.exe /Create /SC ONLOGON /TN SOC-Lab-HealthCheck /TR C:\\Lab\\healthcheck.cmd"}
+    ]
+  }
+]
