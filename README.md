@@ -739,7 +739,7 @@ Detection
 
 ---
 
-## Case 15 — Full SOC Incident Response Capstone
+## Case 15 — [Full SOC Incident Response Capstone](investigations/Case%2015%20-%20SOC%20Incident%20Response%20Capstone/README.md)
 
 The final planned case will simulate a complete incident.
 
@@ -775,7 +775,7 @@ Document
 
 The final case should demonstrate the complete skill set developed throughout the course.
 
-**Status:** 🔜 Planned
+**Status:** ✅ Closed — offline response capstone; 12/12 assurance scenarios passed
 
 ---
 
@@ -1327,7 +1327,7 @@ Directories may be introduced gradually as the corresponding learning area becom
 * [x] Case 12 — Detection Gap *(coverage analysis complete; live validation pending)*
 * [x] Case 13 — Custom Detection *(offline rule validation passed: 6/6)*
 * [x] Case 14 — Attack Chain *(offline correlation validation passed: 6/6)*
-* [ ] Case 15 — SOC Capstone
+* [x] Case 15 — SOC Capstone *(offline response assurance passed: 12/12)*
 
 ## Detection Engineering
 
@@ -1351,13 +1351,13 @@ Directories may be introduced gradually as the corresponding learning area becom
 
 ## Incident Response
 
-* [ ] Evidence preservation
-* [ ] Alert triage
-* [ ] Containment
-* [ ] Eradication
-* [ ] Recovery
-* [ ] Lessons learned
-* [ ] Full incident-response exercise
+* [x] Evidence preservation *(Case 15 offline exercise)*
+* [x] Alert triage *(Case 15 offline exercise)*
+* [x] Containment *(Case 15 offline exercise)*
+* [x] Eradication *(Case 15 offline exercise)*
+* [x] Recovery *(Case 15 offline exercise)*
+* [x] Lessons learned *(Case 15 offline exercise)*
+* [x] Full incident-response exercise *(Case 15 offline exercise)*
 
 ## Automation
 
@@ -1630,13 +1630,13 @@ The objective is to develop the ability to answer:
 
 **Status:** 🚧 Active Development
 
-**Current Phase:** Phase 4 advanced investigation completed → Phase 5 capstone active
+**Current Phase:** Planned case sequence documented; lab revalidation and improvement backlog next
 
-**Completed Investigations:** 9 lab-validated + 3 documented + 2 offline-validated / 15
+**Completed Investigations:** 9 lab-validated + 3 documented + 3 offline-validated / 15
 
-**Current Milestone:** Multi-stage correlation and attack-chain analysis completed; preparing the full SOC capstone.
+**Current Milestone:** All 15 planned case deliverables documented; final capstone includes preserved fixtures and 12 passing assurance tests.
 
-**Next Major Case:** Case 15 — Full SOC Incident Response Capstone
+**Next Major Case:** No remaining planned case. Rebuild the isolated lab, validate Cases 10–15 with captured telemetry, and address the capstone improvement backlog.
 
 ---
 

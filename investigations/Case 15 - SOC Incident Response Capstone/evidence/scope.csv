@@ -1,0 +1,3 @@
+host,user,chain_status,interpretation
+WIN11-LAB,lab-admin,complete,confirmed fixture chain
+WIN11-LAB-02,lab-admin,incomplete,decode-only fixture requires further review

@@ -1,0 +1,186 @@
+{
+  "mode": "offline_simulation",
+  "case": "Case 15 - SOC Incident Response Capstone",
+  "events": [
+    {
+      "timestamp": "2026-10-12T10:00:00Z",
+      "host": "WIN11-LAB",
+      "user": "lab-admin",
+      "source_ip": "192.168.56.20",
+      "event_id": 4624,
+      "logon_type": 3
+    },
+    {
+      "timestamp": "2026-10-12T10:01:00Z",
+      "host": "WIN11-LAB",
+      "user": "lab-admin",
+      "event_id": 1,
+      "image": "C:\\Windows\\System32\\wsmprovhost.exe",
+      "parent_image": "C:\\Windows\\System32\\svchost.exe",
+      "command_line": "wsmprovhost.exe -Embedding"
+    },
+    {
+      "timestamp": "2026-10-12T10:02:00Z",
+      "host": "WIN11-LAB",
+      "user": "lab-admin",
+      "event_id": 1,
+      "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "parent_image": "C:\\Windows\\System32\\wsmprovhost.exe",
+      "command_line": "powershell.exe -NoProfile -Command Get-ComputerInfo"
+    },
+    {
+      "timestamp": "2026-10-12T10:04:00Z",
+      "host": "WIN11-LAB",
+      "user": "lab-admin",
+      "event_id": 1,
+      "image": "C:\\Windows\\System32\\certutil.exe",
+      "parent_image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "command_line": "certutil.exe -decode C:\\Lab\\message.b64 C:\\Lab\\decoded.txt"
+    },
+    {
+      "timestamp": "2026-10-12T10:07:00Z",
+      "host": "WIN11-LAB",
+      "user": "lab-admin",
+      "event_id": 1,
+      "image": "C:\\Windows\\System32\\schtasks.exe",
+      "parent_image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "command_line": "schtasks.exe /Create /SC ONLOGON /TN SOC-Lab-HealthCheck /TR C:\\Lab\\healthcheck.cmd"
+    },
+    {
+      "timestamp": "2026-10-12T12:00:00Z",
+      "host": "WIN11-LAB",
+      "user": "lab-admin",
+      "source_ip": "192.168.56.20",
+      "event_id": 4624,
+      "logon_type": 3
+    },
+    {
+      "timestamp": "2026-10-12T12:01:00Z",
+      "host": "WIN11-LAB",
+      "user": "lab-admin",
+      "event_id": 1,
+      "image": "C:\\Windows\\System32\\wsmprovhost.exe",
+      "parent_image": "C:\\Windows\\System32\\svchost.exe",
+      "command_line": "wsmprovhost.exe -Embedding"
+    },
+    {
+      "timestamp": "2026-10-12T12:02:00Z",
+      "host": "WIN11-LAB",
+      "user": "lab-admin",
+      "event_id": 1,
+      "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "parent_image": "C:\\Windows\\System32\\wsmprovhost.exe",
+      "command_line": "powershell.exe -NoProfile -Command Get-ComputerInfo"
+    },
+    {
+      "timestamp": "2026-10-12T12:04:00Z",
+      "host": "WIN11-LAB-02",
+      "user": "lab-admin",
+      "event_id": 1,
+      "image": "C:\\Windows\\System32\\certutil.exe",
+      "parent_image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "command_line": "certutil.exe -decode C:\\Lab\\message.b64 C:\\Lab\\decoded.txt"
+    },
+    {
+      "timestamp": "2026-10-12T12:07:00Z",
+      "host": "WIN11-LAB",
+      "user": "lab-admin",
+      "event_id": 1,
+      "image": "C:\\Windows\\System32\\schtasks.exe",
+      "parent_image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "command_line": "schtasks.exe /Create /SC ONLOGON /TN SOC-Lab-HealthCheck /TR C:\\Lab\\healthcheck.cmd"
+    }
+  ],
+  "expected_scope": [
+    [
+      "WIN11-LAB",
+      "lab-admin"
+    ]
+  ],
+  "actions": [
+    {
+      "stage": "preserve",
+      "time": "2026-10-12T10:08:00Z",
+      "owner": "SOC analyst",
+      "acceptance": "Evidence hashed before any response decision",
+      "evidence": [
+        "investigations/Case 15 - SOC Incident Response Capstone/evidence/events.json"
+      ]
+    },
+    {
+      "stage": "triage",
+      "time": "2026-10-12T10:10:00Z",
+      "owner": "SOC analyst",
+      "acceptance": "Five stages correlated; high priority accepted",
+      "evidence": [
+        "investigations/Case 15 - SOC Incident Response Capstone/evidence/events.json"
+      ]
+    },
+    {
+      "stage": "scope",
+      "time": "2026-10-12T10:15:00Z",
+      "owner": "Incident lead",
+      "acceptance": "One complete host/account chain; second host unresolved",
+      "evidence": [
+        "investigations/Case 15 - SOC Incident Response Capstone/evidence/scope.csv"
+      ]
+    },
+    {
+      "stage": "contain",
+      "time": "2026-10-12T10:20:00Z",
+      "owner": "Endpoint and identity owners",
+      "acceptance": "Isolation and account restriction recorded in exercise",
+      "evidence": [
+        "investigations/Case 15 - SOC Incident Response Capstone/evidence/recovery.json"
+      ]
+    },
+    {
+      "stage": "eradicate",
+      "time": "2026-10-12T10:35:00Z",
+      "owner": "Endpoint owner",
+      "acceptance": "Task removed and inert artifact quarantined in exercise",
+      "evidence": [
+        "investigations/Case 15 - SOC Incident Response Capstone/evidence/task.xml"
+      ]
+    },
+    {
+      "stage": "recover",
+      "time": "2026-10-12T10:50:00Z",
+      "owner": "System owner",
+      "acceptance": "Logging and service acceptance criteria recorded",
+      "evidence": [
+        "investigations/Case 15 - SOC Incident Response Capstone/evidence/recovery.json"
+      ]
+    },
+    {
+      "stage": "hunt",
+      "time": "2026-10-12T11:50:00Z",
+      "owner": "SOC analyst",
+      "acceptance": "60-minute observation and zero residual fixture matches",
+      "evidence": [
+        "investigations/Case 15 - SOC Incident Response Capstone/evidence/recovery.json"
+      ]
+    },
+    {
+      "stage": "review",
+      "time": "2026-10-12T12:00:00Z",
+      "owner": "Incident lead",
+      "acceptance": "Recovery gates accepted and lessons assigned",
+      "evidence": [
+        "investigations/Case 15 - SOC Incident Response Capstone/evidence/scope.csv"
+      ]
+    }
+  ],
+  "recovery": {
+    "host_isolated": true,
+    "account_restricted": true,
+    "task_absent": true,
+    "artifact_quarantined": true,
+    "telemetry_healthy": true,
+    "service_healthy": true,
+    "owner_approved": true,
+    "residual_hunt_complete": true,
+    "residual_matches": 0,
+    "observation_minutes": 60
+  }
+}

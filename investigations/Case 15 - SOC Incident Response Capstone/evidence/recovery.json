@@ -1,0 +1,16 @@
+{
+  "mode": "simulated_response_state",
+  "checks": {
+    "host_isolated": true,
+    "account_restricted": true,
+    "task_absent": true,
+    "artifact_quarantined": true,
+    "telemetry_healthy": true,
+    "service_healthy": true,
+    "owner_approved": true,
+    "residual_hunt_complete": true,
+    "residual_matches": 0,
+    "observation_minutes": 60
+  },
+  "note": "Acceptance criteria exercised in software; no endpoint response action performed."
+}

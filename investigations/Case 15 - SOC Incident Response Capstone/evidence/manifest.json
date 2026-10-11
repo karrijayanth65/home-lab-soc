@@ -1,0 +1,37 @@
+{
+  "mode": "repository_fixture_integrity",
+  "algorithm": "SHA256",
+  "custodian": "Repository validator",
+  "artifacts": [
+    {
+      "path": "investigations/Case 15 - SOC Incident Response Capstone/evidence/events.json",
+      "size_bytes": 3092,
+      "sha256": "dddb6641e13a1276b01883041e500465a5a9233a6c53555d6cfe76b53e60b774"
+    },
+    {
+      "path": "investigations/Case 15 - SOC Incident Response Capstone/evidence/decoded.txt",
+      "size_bytes": 61,
+      "sha256": "f070481a5d25ada24b6cc0d6ba5ad6e1aacd37193ab61b978b53d4009bac23ba"
+    },
+    {
+      "path": "investigations/Case 15 - SOC Incident Response Capstone/evidence/task.xml",
+      "size_bytes": 627,
+      "sha256": "541b9be74c9e253a2145e745863deea61a2a24962f7f623dcade6d4afbb9ae72"
+    },
+    {
+      "path": "investigations/Case 15 - SOC Incident Response Capstone/evidence/scope.csv",
+      "size_bytes": 172,
+      "sha256": "4131c92ff0e2ac90c711e00ce7ccc7b19adb20e9130a87e99fe36265231489ac"
+    },
+    {
+      "path": "investigations/Case 15 - SOC Incident Response Capstone/evidence/recovery.json",
+      "size_bytes": 470,
+      "sha256": "df8be04c6e3ad9e04dbcf7c78db51bb9249491d0a604c8eb7b3cffa8a6c09df8"
+    },
+    {
+      "path": "investigations/Case 15 - SOC Incident Response Capstone/evidence/exercise.json",
+      "size_bytes": 6272,
+      "sha256": "c61aa12eb284410a2ef48cf3431334f5f60456d1a478f0a8d9471f9a74b5de61"
+    }
+  ]
+}

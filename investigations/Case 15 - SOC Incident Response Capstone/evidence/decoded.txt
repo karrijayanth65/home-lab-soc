@@ -1,0 +1,1 @@
+SOC capstone inert evidence fixture. No executable payload.

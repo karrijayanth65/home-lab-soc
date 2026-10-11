@@ -1,0 +1,185 @@
+{
+  "mode": "offline_simulation",
+  "executed_at_utc": "2026-10-11T20:19:10.561768+00:00",
+  "passed": true,
+  "tests_total": 12,
+  "tests_passed": 12,
+  "artifact_count": 6,
+  "results": [
+    {
+      "id": "complete_exercise",
+      "expected_accept": true,
+      "actual_accept": true,
+      "passed": true,
+      "errors": [],
+      "detected_scope": [
+        [
+          "WIN11-LAB",
+          "lab-admin"
+        ]
+      ]
+    },
+    {
+      "id": "altered_evidence_blocks_closure",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "errors": [
+        "integrity:investigations/Case 15 - SOC Incident Response Capstone/evidence/events.json"
+      ],
+      "detected_scope": [
+        [
+          "WIN11-LAB",
+          "lab-admin"
+        ]
+      ]
+    },
+    {
+      "id": "missing_evidence_blocks_closure",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "errors": [
+        "integrity:investigations/Case 15 - SOC Incident Response Capstone/evidence/events.json",
+        "missing_action_evidence"
+      ],
+      "detected_scope": [
+        [
+          "WIN11-LAB",
+          "lab-admin"
+        ]
+      ]
+    },
+    {
+      "id": "task_absent_required",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "errors": [
+        "recovery:task_absent"
+      ],
+      "detected_scope": [
+        [
+          "WIN11-LAB",
+          "lab-admin"
+        ]
+      ]
+    },
+    {
+      "id": "telemetry_healthy_required",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "errors": [
+        "recovery:telemetry_healthy"
+      ],
+      "detected_scope": [
+        [
+          "WIN11-LAB",
+          "lab-admin"
+        ]
+      ]
+    },
+    {
+      "id": "owner_approved_required",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "errors": [
+        "recovery:owner_approved"
+      ],
+      "detected_scope": [
+        [
+          "WIN11-LAB",
+          "lab-admin"
+        ]
+      ]
+    },
+    {
+      "id": "residual_hunt_complete_required",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "errors": [
+        "recovery:residual_hunt_complete"
+      ],
+      "detected_scope": [
+        [
+          "WIN11-LAB",
+          "lab-admin"
+        ]
+      ]
+    },
+    {
+      "id": "recurrence_blocks_closure",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "errors": [
+        "residual_activity"
+      ],
+      "detected_scope": [
+        [
+          "WIN11-LAB",
+          "lab-admin"
+        ]
+      ]
+    },
+    {
+      "id": "short_observation_blocks_closure",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "errors": [
+        "observation_window"
+      ],
+      "detected_scope": [
+        [
+          "WIN11-LAB",
+          "lab-admin"
+        ]
+      ]
+    },
+    {
+      "id": "late_preservation_blocks_closure",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "errors": [
+        "response_order",
+        "response_timestamps"
+      ],
+      "detected_scope": [
+        [
+          "WIN11-LAB",
+          "lab-admin"
+        ]
+      ]
+    },
+    {
+      "id": "incorrect_scope_blocks_closure",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "errors": [
+        "scope_or_detection_mismatch"
+      ],
+      "detected_scope": [
+        [
+          "WIN11-LAB",
+          "lab-admin"
+        ]
+      ]
+    },
+    {
+      "id": "incomplete_chain_blocks_validation",
+      "expected_accept": false,
+      "actual_accept": false,
+      "passed": true,
+      "errors": [
+        "scope_or_detection_mismatch"
+      ],
+      "detected_scope": []
+    }
+  ]
+}
