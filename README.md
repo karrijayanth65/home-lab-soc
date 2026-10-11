@@ -614,7 +614,7 @@ A suspicious action does not necessarily require a suspicious executable.
 
 ---
 
-## Case 12 — Detection Gap Investigation
+## Case 12 — [Detection Gap Investigation](investigations/Case%2012%20-%20Detection%20Gap/README.md)
 
 **Objective**
 
@@ -649,7 +649,7 @@ Detection Gap?
 * Detection limitations
 * False negatives
 
-**Status:** 🔜 Planned
+**Status:** ✅ Closed — Documented coverage analysis; live validation pending
 
 ---
 
@@ -1324,14 +1324,14 @@ Directories may be introduced gradually as the corresponding learning area becom
 * [x] Case 09 — SMB / Resource Access
 * [x] Case 10 — Remote Execution *(reconstructed PoC; live revalidation pending)*
 * [x] Case 11 — Defense Evasion *(documentation PoC; live validation pending)*
-* [ ] Case 12 — Detection Gap
+* [x] Case 12 — Detection Gap *(coverage analysis complete; live validation pending)*
 * [ ] Case 13 — Custom Detection
 * [ ] Case 14 — Attack Chain
 * [ ] Case 15 — SOC Capstone
 
 ## Detection Engineering
 
-* [ ] Detection gap analysis
+* [x] Detection gap analysis
 * [ ] Wazuh custom rules
 * [ ] Sigma fundamentals
 * [ ] Detection testing
@@ -1630,13 +1630,13 @@ The objective is to develop the ability to answer:
 
 **Status:** 🚧 Active Development
 
-**Current Phase:** Phase 1 completed → Phase 2 active
+**Current Phase:** Phase 1 and Phase 2 completed → Phase 3 active
 
-**Completed Investigations:** 9 validated + 2 documented / 15
+**Completed Investigations:** 9 validated + 3 documented / 15
 
-**Current Milestone:** Defense-evasion behavioral analysis completed; preparing detection-gap analysis.
+**Current Milestone:** Detection-gap analysis completed; preparing custom detection engineering.
 
-**Next Major Case:** Case 12 — Detection Gap Investigation
+**Next Major Case:** Case 13 — Custom Detection Engineering
 
 ---
 
