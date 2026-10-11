@@ -567,7 +567,7 @@ The purpose is to understand attacker behavior from a defender's perspective.
 
 ---
 
-## Case 10 — Remote Execution
+## Case 10 — [Remote Execution](investigations/Case%2010%20-%20Remote%20Execution/README.md)
 
 **Concepts**
 
@@ -587,7 +587,7 @@ The purpose is to understand attacker behavior from a defender's perspective.
 * Network telemetry
 * Wazuh
 
-**Status:** 🔜 Planned
+**Status:** ✅ Closed — Reconstructed PoC; original event evidence unavailable
 
 ---
 
@@ -1319,10 +1319,10 @@ Directories may be introduced gradually as the corresponding learning area becom
 * [x] Case 04 — Process Creation 4688
 * [x] Case 05 — Service Creation 7045
 * [x] Case 06 — Scheduled Task 4698
-* [ ] Case 07 — Network Reconnaissance
-* [ ] Case 08 — Authentication Attack
-* [ ] Case 09 — SMB / Resource Access
-* [ ] Case 10 — Remote Execution
+* [x] Case 07 — Network Reconnaissance
+* [x] Case 08 — Authentication Attack
+* [x] Case 09 — SMB / Resource Access
+* [x] Case 10 — Remote Execution *(reconstructed PoC; live revalidation pending)*
 * [ ] Case 11 — Defense Evasion
 * [ ] Case 12 — Detection Gap
 * [ ] Case 13 — Custom Detection
@@ -1630,13 +1630,13 @@ The objective is to develop the ability to answer:
 
 **Status:** 🚧 Active Development
 
-**Current Phase:** Phase 1 completed → Phase 2 preparation
+**Current Phase:** Phase 1 completed → Phase 2 active
 
-**Completed Investigations:** 6 / 15
+**Completed Investigations:** 9 validated + 1 reconstructed / 15
 
-**Current Milestone:** Transition from Windows security foundations to attacker-informed defensive investigation.
+**Current Milestone:** Remote-execution documentation completed; preparing defense-evasion analysis.
 
-**Next Major Case:** Case 07 — Network Reconnaissance
+**Next Major Case:** Case 11 — Defense Evasion / Living-off-the-Land Concepts
 
 ---
 
