@@ -1,0 +1,18 @@
+<!--
+  Case 13 - Custom Detection Engineering
+  Deploy under /var/ossec/etc/rules/ after confirming field names and parent rule 61603
+  against the installed Wazuh version. Rule ID 100201 is in Wazuh's recommended
+  custom range of 100000-120000.
+-->
+<group name="case13,windows,sysmon,">
+  <rule id="100201" level="8">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.image" type="pcre2">(?i)\\certutil\.exe$</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)(?:^|\s)-(?:decode|decodehex)(?:\s|$)</field>
+    <description>Case 13: certutil.exe decoded a file on $(win.system.computer)</description>
+    <mitre>
+      <id>T1140</id>
+    </mitre>
+    <group>process_creation,file_decode,stealth,</group>
+  </rule>
+</group>

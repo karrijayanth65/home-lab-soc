@@ -1,0 +1,28 @@
+title: Certutil File Decode
+id: daf6d13d-7890-4f07-9085-8f33fe3ff5b1
+status: test
+description: Detects certutil.exe decoding a file, which can be legitimate administration or an attempt to decode staged content.
+references:
+    - https://attack.mitre.org/techniques/T1140/
+    - https://attack.mitre.org/software/S0160/
+author: Jayanth Karri
+date: 2026-10-12
+tags:
+    - attack.t1140
+logsource:
+    category: process_creation
+    product: windows
+    definition: Requires process creation telemetry with full image and command-line fields, such as Sysmon Event ID 1 or Windows Security Event ID 4688 with command-line auditing enabled.
+detection:
+    selection_image:
+        - Image|endswith: '\certutil.exe'
+        - OriginalFileName: 'CertUtil.exe'
+    selection_decode:
+        CommandLine|contains:
+            - ' -decode '
+            - ' -decodehex '
+    condition: selection_image and selection_decode
+falsepositives:
+    - Approved certificate administration or support workflows that decode known files
+    - Software deployment activity using certutil.exe with documented change control
+level: medium

@@ -653,7 +653,7 @@ Detection Gap?
 
 ---
 
-## Case 13 — Custom Detection Engineering
+## Case 13 — [Custom Detection Engineering](investigations/Case%2013%20-%20Custom%20Detection/README.md)
 
 **Objective**
 
@@ -695,7 +695,7 @@ Document
 * Sigma
 * MITRE ATT&CK
 
-**Status:** 🔜 Planned
+**Status:** ✅ Closed — Sigma and Wazuh rule logic validated against six fixtures
 
 ---
 
@@ -1325,20 +1325,20 @@ Directories may be introduced gradually as the corresponding learning area becom
 * [x] Case 10 — Remote Execution *(reconstructed PoC; live revalidation pending)*
 * [x] Case 11 — Defense Evasion *(documentation PoC; live validation pending)*
 * [x] Case 12 — Detection Gap *(coverage analysis complete; live validation pending)*
-* [ ] Case 13 — Custom Detection
+* [x] Case 13 — Custom Detection *(offline rule validation passed: 6/6)*
 * [ ] Case 14 — Attack Chain
 * [ ] Case 15 — SOC Capstone
 
 ## Detection Engineering
 
 * [x] Detection gap analysis
-* [ ] Wazuh custom rules
-* [ ] Sigma fundamentals
-* [ ] Detection testing
-* [ ] Detection tuning
+* [x] Wazuh custom rules
+* [x] Sigma fundamentals
+* [x] Detection testing
+* [x] Detection tuning
 * [ ] Correlation
-* [ ] MITRE ATT&CK Detection Strategies
-* [ ] Detection coverage analysis
+* [x] MITRE ATT&CK Detection Strategies
+* [x] Detection coverage analysis
 
 ## Threat Hunting
 
@@ -1366,7 +1366,7 @@ Directories may be introduced gradually as the corresponding learning area becom
 * [ ] PowerShell automation
 * [ ] Telegram alerting
 * [ ] Automated evidence collection
-* [ ] Detection validation automation
+* [x] Detection validation automation
 
 ---
 
@@ -1630,13 +1630,13 @@ The objective is to develop the ability to answer:
 
 **Status:** 🚧 Active Development
 
-**Current Phase:** Phase 1 and Phase 2 completed → Phase 3 active
+**Current Phase:** Phase 3 core detection engineering completed → Phase 4 active
 
-**Completed Investigations:** 9 validated + 3 documented / 15
+**Completed Investigations:** 9 lab-validated + 3 documented + 1 offline-validated / 15
 
-**Current Milestone:** Detection-gap analysis completed; preparing custom detection engineering.
+**Current Milestone:** Custom detection artifacts and repeatable tests completed; preparing multi-stage correlation.
 
-**Next Major Case:** Case 13 — Custom Detection Engineering
+**Next Major Case:** Case 14 — Multi-Stage Attack Chain
 
 ---
 

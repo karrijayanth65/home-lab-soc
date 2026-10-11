@@ -1,0 +1,55 @@
+{
+  "case": "Case 13 - Custom Detection Engineering",
+  "validation_type": "offline rule-artifact and fixture validation",
+  "passed": true,
+  "artifact_errors": [],
+  "tests_total": 6,
+  "tests_passed": 6,
+  "expected_matches": 2,
+  "sigma_actual_matches": 2,
+  "wazuh_actual_matches": 2,
+  "results": [
+    {
+      "id": "positive_decode_temp",
+      "expected": true,
+      "sigma_actual": true,
+      "wazuh_actual": true,
+      "passed": true
+    },
+    {
+      "id": "positive_decodehex_case_insensitive",
+      "expected": true,
+      "sigma_actual": true,
+      "wazuh_actual": true,
+      "passed": true
+    },
+    {
+      "id": "negative_hashfile",
+      "expected": false,
+      "sigma_actual": false,
+      "wazuh_actual": false,
+      "passed": true
+    },
+    {
+      "id": "negative_encode_only",
+      "expected": false,
+      "sigma_actual": false,
+      "wazuh_actual": false,
+      "passed": true
+    },
+    {
+      "id": "negative_wrong_process",
+      "expected": false,
+      "sigma_actual": false,
+      "wazuh_actual": false,
+      "passed": true
+    },
+    {
+      "id": "negative_verify_store",
+      "expected": false,
+      "sigma_actual": false,
+      "wazuh_actual": false,
+      "passed": true
+    }
+  ]
+}
