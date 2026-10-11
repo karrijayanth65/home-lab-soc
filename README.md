@@ -591,7 +591,7 @@ The purpose is to understand attacker behavior from a defender's perspective.
 
 ---
 
-## Case 11 — Defense Evasion / Living-off-the-Land Concepts
+## Case 11 — [Defense Evasion / Living-off-the-Land Concepts](investigations/Case%2011%20-%20Defense%20Evasion/README.md)
 
 **Concepts**
 
@@ -606,7 +606,7 @@ The purpose is to understand attacker behavior from a defender's perspective.
 
 A suspicious action does not necessarily require a suspicious executable.
 
-**Status:** 🔜 Planned
+**Status:** ✅ Closed — Documentation PoC; live validation pending
 
 ---
 
@@ -1323,7 +1323,7 @@ Directories may be introduced gradually as the corresponding learning area becom
 * [x] Case 08 — Authentication Attack
 * [x] Case 09 — SMB / Resource Access
 * [x] Case 10 — Remote Execution *(reconstructed PoC; live revalidation pending)*
-* [ ] Case 11 — Defense Evasion
+* [x] Case 11 — Defense Evasion *(documentation PoC; live validation pending)*
 * [ ] Case 12 — Detection Gap
 * [ ] Case 13 — Custom Detection
 * [ ] Case 14 — Attack Chain
@@ -1632,11 +1632,11 @@ The objective is to develop the ability to answer:
 
 **Current Phase:** Phase 1 completed → Phase 2 active
 
-**Completed Investigations:** 9 validated + 1 reconstructed / 15
+**Completed Investigations:** 9 validated + 2 documented / 15
 
-**Current Milestone:** Remote-execution documentation completed; preparing defense-evasion analysis.
+**Current Milestone:** Defense-evasion behavioral analysis completed; preparing detection-gap analysis.
 
-**Next Major Case:** Case 11 — Defense Evasion / Living-off-the-Land Concepts
+**Next Major Case:** Case 12 — Detection Gap Investigation
 
 ---
 
